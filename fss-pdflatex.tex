@@ -1,43 +1,27 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% I, the copyright holder of this work, release this work into the
-%% public domain. This applies worldwide. In some countries this may
-%% not be legally possible; if so: I grant anyone the right to use
-%% this work for any purpose, without any conditions, unless such
-%% conditions are required by law.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \documentclass{beamer}
 \usetheme[faculty=fss]{fibeamer}
 \usepackage[utf8]{inputenc}
-\usepackage[
-  main=english, %% By using `czech` or `slovak` as the main locale
-                %% instead of `english`, you can typeset the
-                %% presentation in either Czech or Slovak,
-                %% respectively.
-  czech, slovak %% The additional keys allow foreign texts to be
-]{babel}        %% typeset as follows:
-%%
-%%   \begin{otherlanguage}{czech}   ... \end{otherlanguage}
-%%   \begin{otherlanguage}{slovak}  ... \end{otherlanguage}
-%%
-%% These macros specify information about the presentation
-\title{Presentation Title} %% that will be typeset on the
-\subtitle{Presentation Subtitle} %% title page.
+\usepackage[main=italian,english]{babel}
+
+\title{Presentation Title}
+\subtitle{Presentation Subtitle}
 \author{Author's Name}
-%% These additional packages are used within the document:
-\usepackage{ragged2e}  % `\justifying` text
-\usepackage{booktabs}  % Tables
+
+\usepackage{ragged2e}
+\usepackage{booktabs}
 \usepackage{tabularx}
-\usepackage{tikz}      % Diagrams
+\usepackage{tikz}
 \usetikzlibrary{calc, shapes, backgrounds}
 \usepackage{amsmath, amssymb}
-\usepackage{url}       % `\url`s
-\usepackage{listings}  % Code listings
+\usepackage{url}
+\usepackage{listings}
+
 \frenchspacing
+
 \begin{document}
   \frame{\maketitle}
 
-  \AtBeginSection[]{% Print an outline at the beginning of sections
+  \AtBeginSection[]{
     \begin{frame}<beamer>
       \frametitle{Outline for Section \thesection}
       \tableofcontents[currentsection]
@@ -214,8 +198,6 @@
       \framesubtitle{Tables, graphs, and images}
       \begin{figure}[b]
         \centering
-        % Flipping a coin
-        % Author: cis
         \tikzset{
           head/.style = {fill = none, label = center:\textsf{H}},
           tail/.style = {fill = none, label = center:\textsf{T}}}
